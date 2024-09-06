@@ -14,6 +14,7 @@ public class RepkgHandler extends DefaultHandler{
         private static final String NAME = "packageName";
         private static final String VERSION = "version";
         private static final String SHA256 = "sha256";
+        private static final String URL = "url";
 
         private Repkg repkg;
         private StringBuilder elementValue;
@@ -50,6 +51,9 @@ public class RepkgHandler extends DefaultHandler{
                 case SHA256:
                     elementValue = new StringBuilder();
                     break;
+                case URL:
+                    elementValue = new StringBuilder();
+                    break;
             }
         }
 
@@ -64,6 +68,9 @@ public class RepkgHandler extends DefaultHandler{
                     break;
                 case SHA256:
                     latestPackageVer().setSha256(elementValue.toString());
+                    break;
+                case URL:
+                    latestPackageVer().setUrl(elementValue.toString());
                     break;
             }
         }

@@ -23,10 +23,12 @@ public class ParserTest {
         assertEquals("test-package", package1.getPackageName());
         assertEquals("1.0.0", package1.getVersion());
         assertEquals("abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890", package1.getSha256());
+        assertEquals("https://example.com/test-package-1.0.0.tar.gz", package1.getUrl());
 
         PackageVer package2 = packages.get(1);
         assertEquals("another-package", package2.getPackageName());
         assertEquals("2.1.3", package2.getVersion());
         assertEquals("0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef", package2.getSha256());
+        assertEquals("https://example.com/another-package-2.1.3.tar.gz", package2.getUrl());
     }
 }
