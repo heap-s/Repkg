@@ -17,5 +17,3 @@ buildNumber.properties
 .classpath
 .vscode
 .gradle
-gradlew
-gradlew.bat
