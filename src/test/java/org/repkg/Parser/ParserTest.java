@@ -8,7 +8,7 @@ import org.repkg.packages.PackageVer;
 
 import java.util.List;
 
-public class TestParser {
+public class ParserTest {
 
     @Test
     public void testParseTestConfig() throws Exception {

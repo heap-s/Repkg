@@ -7,12 +7,12 @@ public class FileHandler {
 
     public FileHandler() {
         this.inputPath = "resources/autoconfig.xml";
-        this.outputPath = "/temp/output/logs.txt";
+        this.outputPath = constructLogFilePath();
     }
 
-    public FileHandler(String inputPath, String outputPath) {
+    public FileHandler(String inputPath) {
         this.inputPath = inputPath;
-        this.outputPath = outputPath;
+        this.outputPath = constructLogFilePath();
     }
 
     public String getInputPath() {
@@ -27,8 +27,9 @@ public class FileHandler {
         this.inputPath = inputPath;
     }
 
-    public void setOutputPath(String outputPath) {
-        this.outputPath = outputPath;
+
+    public String constructLogFilePath() {
+        return "/temp/output/logs/repkg-" + Date.getCurrentDate() + ".txt";
     }
 
 } 
