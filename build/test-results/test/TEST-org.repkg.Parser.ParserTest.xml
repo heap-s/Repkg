@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.repkg.Parser.ParserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-06T18:33:46" hostname="LAPTOP-I6Q6EF1M" time="0.025">
+  <properties/>
+  <testcase name="testParseTestConfig" classname="org.repkg.Parser.ParserTest" time="0.025"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

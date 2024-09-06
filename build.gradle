@@ -1,0 +1,37 @@
+apply plugin: 'java'
+
+group = 'org.repkg'
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.repkg.App'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+wrapper {
+    gradleVersion = '7.6'
+}
+
+// Define the main class
+def mainClassName = 'org.repkg.App'
+
+// Create a task to run the application
+task run(type: JavaExec) {
+    main = mainClassName
+    classpath = sourceSets.main.runtimeClasspath
+}
