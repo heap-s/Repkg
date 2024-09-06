@@ -1,4 +1,4 @@
-package org.repkg.Parser;
+package org.repkg.parserTest;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

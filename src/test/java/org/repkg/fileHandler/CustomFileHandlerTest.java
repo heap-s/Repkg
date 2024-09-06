@@ -1,4 +1,4 @@
-package org.repkg.FileHandler;
+package org.repkg.fileHandler;
 
 import org.repkg.utils.FileHandler;
 import org.junit.Test;
