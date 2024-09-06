@@ -1,6 +1,6 @@
 # Repkg
-
-![Build Status](https://img.shields.io/github/actions/workflow/status/heap-s/Repkg/maven.yml)
+![Gradle Build Status](https://img.shields.io/github/actions/workflow/status/heap-s/Repkg/gradle.yml)
+![Maven Build Status](https://img.shields.io/github/actions/workflow/status/heap-s/Repkg/maven.yml)
 ![License](https://img.shields.io/github/license/heap-s/Repkg)
 
 Repkg is a general package manager designed with reverse engineering malware in mind. It comes with default autoconfig options for simplifying and automating the process of reverse engineering. This tool aims to streamline the setup and management of various reverse engineering packages and configurations.
