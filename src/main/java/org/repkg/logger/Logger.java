@@ -9,27 +9,25 @@ public final class Logger implements Exceptions {
         FATAL
     }
     public void PackageNotFoundException() {
-        System.err.println("Package not found");
+        System.err.println(logLevel.ERROR + ": Package not found");
     }
     public void PackageVersionNotFoundException() {
-        System.err.println("Package version not found");
-    }
-    public void PackageVersionAlreadyExistsException() {
-        System.err.println("Package version already exists");
+        System.err.println(logLevel.WARNING + ": Package version not found");
     }
     public void PackageAlreadySatisfiedException() {
-        System.err.println("Package already satisfied");
+        System.err.println(logLevel.WARNING + ": Package already satisfied");
     }
     public void PackageNotSatisfiedException() {
-        System.err.println("Package not satisfied");
-    }
-    public void PackageVersionNotSatisfiedException() {
-        System.err.println("Package version not satisfied");
+        System.err.println(logLevel.FATAL + ": Package not satisfied");
     }
     public void PackageVersionAlreadySatisfiedException() {
-        System.err.println("Package version already satisfied");
+        System.err.println(logLevel.WARNING + ": Package version already satisfied");
     }
     public void PackageVersionNotExistsException() {
-        System.err.println("Package version not exists");
+        System.err.println(logLevel.FATAL + ": Package version not exists");
+    }
+
+    public void CannotFetchPackageException(){
+        System.err.println(logLevel.ERROR + ": Could not fetch package from remote");
     }
 }

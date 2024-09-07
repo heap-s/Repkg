@@ -23,49 +23,43 @@ public class LoggerTest {
     @Test
     public void testPackageNotFoundException() {
         logger.PackageNotFoundException();
-        assertEquals("Package not found\n", errContent.toString());
+        assertEquals("ERROR: Package not found\n", errContent.toString());
     }
 
     @Test
     public void testPackageVersionNotFoundException() {
         logger.PackageVersionNotFoundException();
-        assertEquals("Package version not found\n", errContent.toString());
-    }
-
-    @Test
-    public void testPackageVersionAlreadyExistsException() {
-        logger.PackageVersionAlreadyExistsException();
-        assertEquals("Package version already exists\n", errContent.toString());
+        assertEquals("WARNING: Package version not found\n", errContent.toString());
     }
 
     @Test
     public void testPackageAlreadySatisfiedException() {
         logger.PackageAlreadySatisfiedException();
-        assertEquals("Package already satisfied\n", errContent.toString());
+        assertEquals("WARNING: Package already satisfied\n", errContent.toString());
     }
 
     @Test
     public void testPackageNotSatisfiedException() {
         logger.PackageNotSatisfiedException();
-        assertEquals("Package not satisfied\n", errContent.toString());
-    }
-
-    @Test
-    public void testPackageVersionNotSatisfiedException() {
-        logger.PackageVersionNotSatisfiedException();
-        assertEquals("Package version not satisfied\n", errContent.toString());
+        assertEquals("FATAL: Package not satisfied\n", errContent.toString());
     }
 
     @Test
     public void testPackageVersionAlreadySatisfiedException() {
         logger.PackageVersionAlreadySatisfiedException();
-        assertEquals("Package version already satisfied\n", errContent.toString());
+        assertEquals("WARNING: Package version already satisfied\n", errContent.toString());
     }
 
     @Test
     public void testPackageVersionNotExistsException() {
         logger.PackageVersionNotExistsException();
-        assertEquals("Package version not exists\n", errContent.toString());
+        assertEquals("FATAL: Package version not exists\n", errContent.toString());
+    }
+    
+    @Test
+    public void testCannotFetchPackageException(){
+        logger.CannotFetchPackageException();
+        assertEquals("ERROR: Could not fetch package from remote\n", errContent.toString());
     }
 
     @After
