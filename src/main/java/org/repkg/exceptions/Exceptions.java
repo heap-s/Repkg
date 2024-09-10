@@ -1,12 +1,12 @@
 package org.repkg.exceptions;
 
 public interface Exceptions {
-    public void PackageNotFoundException();
-    public void PackageVersionNotFoundException();
-    public void PackageAlreadySatisfiedException();
-    public void PackageNotSatisfiedException();
-    public void PackageVersionAlreadySatisfiedException();
-    public void PackageVersionNotExistsException();
+    public String PackageNotFoundException();
+    public String PackageVersionNotFoundException();
+    public String PackageAlreadySatisfiedException();
+    public String PackageNotSatisfiedException();
+    public String PackageVersionAlreadySatisfiedException();
+    public String PackageVersionNotExistsException();
 
-    public void CannotFetchPackageException();
+    public String CannotFetchPackageException();
 }
