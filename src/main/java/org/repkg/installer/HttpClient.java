@@ -13,22 +13,36 @@ import com.google.gson.JsonObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.repkg.utils.FileHandler;
+
+// TODO: should I handle IO here with the filehandler? Or should that be taken care of in FileHandler.java... 
 public class HttpClient {
     private ArrayList<String> packageUrls;
+    private FileHandler fh;    
     public HttpClient() {
         this.packageUrls = new ArrayList<>();
+        this.fh = new FileHandler();
     }
 
-    public HttpClient(ArrayList <String> packageUrls){
+    public HttpClient(ArrayList <String> packageUrls, FileHandler fh){
         this.packageUrls = packageUrls;
+        this.fh = fh;
     }
 
     public ArrayList<String> getPackageUrls() {
         return packageUrls;
     }
 
+    public FileHandler getFileHandler(){
+        return fh;
+    }
+
     public void setPackageUrls(ArrayList <String> packageUrls){
         this.packageUrls = packageUrls; 
+    }
+
+    public void setFileHandler(FileHandler fh){
+        this.fh = fh; 
     }
 
     public ArrayList <JsonObject> minimalHttpClient(ArrayList<String> packageUrls) throws IOException, ParseException{
