@@ -14,11 +14,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import org.repkg.utils.FileHandler;
+import org.repkg.logger.Logger;
 
 // TODO: should I handle IO here with the filehandler? Or should that be taken care of in FileHandler.java... 
 public class HttpClient {
     private ArrayList<String> packageUrls;
     private FileHandler fh;    
+    Logger log = new Logger();
     public HttpClient() {
         this.packageUrls = new ArrayList<>();
         this.fh = new FileHandler();
@@ -58,7 +60,9 @@ public class HttpClient {
                 }
             } catch (IOException e) {
                 // Log the exception or handle it as needed
+                log.CannotFetchPackageException();
                 e.printStackTrace();
+
             }
         }
         return results;

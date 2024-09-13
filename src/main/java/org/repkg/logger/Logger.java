@@ -1,8 +1,6 @@
 package org.repkg.logger;
 
-import org.repkg.exceptions.Exceptions;
-
-public final class Logger implements Exceptions {
+public class Logger{
     private enum logLevel{
         WARNING,
         ERROR,
